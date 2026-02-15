@@ -4,7 +4,7 @@
 	"homepage": "https://davib112.github.io/portfolio-website",
 	"private": true,
 	"scripts": {
-		"predeploy": "npm run clean && git diff-index --quiet HEAD -- || (echo git ERROR: Working tree not clean, submit changes && exit 1) && npm run build",
+		"predeploy": "npm run clean && npm run gitCheck && npm run build",
 		"deploy": "gh-pages -d build -f",
 		"postdeploy": "npm run gitDestash",
 
@@ -16,7 +16,9 @@
 		"clean": "npm run cleanCache && npm run cleanNext npm run cleanBuild",
 		"cleanCache": "if exist node_modules\\.cache\\gh-pages rmdir /s /q node_modules\\.cache\\gh-pages",
 		"cleanNext": "if exist .next rmdir /s /q .next",
-		"cleanBuild": "if exist build rmdir /s /q build"
+		"cleanBuild": "if exist build rmdir /s /q build",
+
+		"gitCheck": "git diff-index --quiet HEAD -- || (echo git ERROR: Working tree not clean, submit changes && exit 1)"
 
 	},
 	"dependencies": {
