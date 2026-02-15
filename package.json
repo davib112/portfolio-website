@@ -13,8 +13,8 @@
 		"start": "next start",
 		"lint": "next lint",
 
-		"clean": "npm run cleanCache && npm run cleanNext npm run cleanBuild",
-		"cleanCache": "if exist node_modules\\.cache\\gh-pages rmdir /s /q node_modules\\.cache\\gh-pages",
+		"clean": "npm run cleanCache && npm run cleanNext npm && run cleanBuild",
+		"cleanCache": "if exist node_modules\\.cache\\gh-pages del /s /q node_modules\\.cache\\gh-pages",
 		"cleanNext": "if exist .next rmdir /s /q .next",
 		"cleanBuild": "if exist build rmdir /s /q build",
 
