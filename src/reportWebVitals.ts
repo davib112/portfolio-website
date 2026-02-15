@@ -1,4 +1,4 @@
-import { ReportHandler } from "web-vitals";
+/*import { ReportHandler } from "web-vitals";
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
 	if (onPerfEntry && onPerfEntry instanceof Function) {
@@ -14,4 +14,4 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
 	}
 };
 
-export default reportWebVitals;
+export default reportWebVitals;*/
