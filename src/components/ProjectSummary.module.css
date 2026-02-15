@@ -1,0 +1,93 @@
+.Grid {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(1, 1fr);
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+@media (min-width: 1000px) {
+	.Grid {
+		grid-template-columns: repeat(2, 1fr);
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+}
+
+.ProjectSummary {
+	background-color: var(--bg-color-2);
+	color: var(--text-color);
+	border-radius: 8px;
+	padding: 1rem;
+
+	border: 4px solid var(--accent-color);
+	border-radius: 6px;
+	text-align: center;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-decoration: none;
+	position: relative;
+}
+	.ProjectSummary:Hover {
+		border-color: var(--dark-accent-color);
+	}
+
+.ProjectLink {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	text-decoration: none;
+	color: inherit;
+}
+
+.Video {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.OnVideoTextWrapper {
+	position: relative;
+	display: inline;
+	overflow: hidden;
+}
+
+.OnVideoText {
+	position: absolute;
+	bottom: -5px;
+	left: -5px;
+	right: -5px;
+	height: 1.2em;
+	background-color: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+	display: flex;
+	padding: 5px 10px 10px 10px;
+}
+
+.OnVideoGroup {
+	text-align: left;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.OnVideoGroup p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0.6rem;
+	margin-right: 10px;
+}
+
+.summary h1 {
+	margin: 0.5rem;
+}
+
+.summary p {
+	margin: 1rem;
+	font-size: 1.4rem;
+	text-align: left;
+}

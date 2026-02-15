@@ -1,0 +1,153 @@
+.base {
+	position: sticky;
+	top: 0;
+	padding: 10px;
+	margin-bottom: 30px;
+	z-index: 1000;
+	/*font-size: calc(10px + 1vmin);
+	color: var(--accent-color);*/
+	background-color: var(--bg-color-2);
+	/*cursor: none;*/
+
+	border-bottom: 4px solid var(--accent-color);
+}
+
+	.base h1 {
+		font-size: 2.7rem;
+	}
+		.base h1:hover {
+	color: var(--dark-accent-color);
+}
+	
+	.base p{
+		padding-left:1.5px;
+	}
+.HeaderLink {
+	color: var(--accent-color);
+	text-decoration: none;
+}
+
+.seperator {
+	display: grid;
+	grid-auto-flow: column;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+
+.seperatorRightDesktop nav ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: right;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+	font-size: 1.5rem;
+}
+
+	.seperatorRightDesktop nav ul li {
+		margin: 0;
+		padding: 0;
+	}
+
+.seperatorRightDesktop nav ul li a {
+	text-decoration: none;
+	color: var(--text-color);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.seperatorRightDesktop nav ul li button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	border: 2px solid var(--accent-color);
+	border-radius: 6px;
+	background: transparent;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	font-size: 1.5rem;
+	color: var(--text-color);
+}
+.seperatorRightDesktop nav ul li button:hover {
+	border-color:var(--dark-accent-color);
+}
+
+
+.seperatorRightDesktop nav ul li a img {
+	max-height: 40px;
+	height: 1em;
+	width: auto;
+	object-fit:fill;
+	display: block;
+}
+
+/*Hamburger*/
+.seperatorRightHamburger {
+	display: none;
+}
+
+.seperatorRightHamburger a {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.seperatorRightHamburger img {
+	max-height: 40px;
+	height: auto;
+	width: auto;
+	object-fit: contain;
+}
+.hamburgerMenu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 250ms linear, opacity 150ms linear;
+}
+
+.hamburgerMenu nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+	font-size: 1.8rem;
+}
+
+.hamburgerMenu nav ul li {
+	margin: 4px;
+	padding: 4px;
+	height: 2rem;
+	background-color: var(--bg-color-2);
+	display:flex;
+}
+
+.hamburgerMenu nav ul li a {
+	flex: 1;
+	text-decoration: none;
+	color: var(--text-color);
+}
+.hamburgerMenu nav ul li a img {
+	height: 1.5rem;
+	margin-right: 10px;
+}
+
+
+/*Phone*/
+@media (max-width: 630px) {
+	.seperator {
+		padding-right: 2%;
+	}
+	.seperatorRightDesktop {
+		display:none;
+	}
+	.seperatorRightHamburger {
+		display:flex;
+	}
+	.HamburgerOpen {
+		border-top: 4px solid var(--accent-color);
+		margin: 6px;
+		max-height: 100vh;
+	}
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "nti",
+    "title": "Design & Product Development Student",
+    "subtitle": "NTI Gymnasiet Odenplan",
+    "period": "2019 – 2022",
+    "description": [
+      "High school education with a focus on technical design and development.",
+      "Introduced to programming fundamentals, 3D modeling, and digital production.",
+      "Built a strong foundation for further studies in software and game development."
+    ]
+  },
+  {
+    "id": "tga",
+    "title": "Game Programmer Student",
+    "subtitle": "The Game Assembly, Stockholm",
+    "period": "2022 – 2025",
+    "description": [
+      "Higher Vocational Education focused on professional game development.",
+      "Developed 8 full game projects in multidisciplinary teams of ~13 people.",
+      "Worked primarily in C++ using in-house engines, with additional projects in Unity.",
+      "Specialized in gameplay systems, tools development, and engine-side features.",
+      "Built a custom C++ game engine using DirectX 11 with editor tooling via Dear ImGui."
+    ],
+    "projectsIDs": [
+      "Donkeys_Inferno",
+      "Aeon",
+      "Spite",
+      "Snabb_Grabb",
+      "Power_Valley",
+      "Lonely_Lighthouse",
+      "CrackEngine"
+    ]
+  },
+  {
+    "id": "ion",
+    "title": "Game Programmer Intern",
+    "subtitle": "Ion Game Design",
+    "period": "2024 – 2025",
+    "description": [
+      "Contributed to the development of the released title High Frontier 4 All.",
+      "Worked across both back-end systems and front-end UI development.",
+      "Improved critical networking systems, including the command system.",
+      "Focused on increasing performance, stability, and overall system reliability."
+    ],
+    "projectsIDs": [
+      "HF4"
+    ]
+  },
+  {
+    "id": "sailing",
+    "title": "Sailing Instructor",
+    "subtitle": "Scouts & Skeppsholmsgården",
+    "period": "2021 – Present",
+    "description": [
+      "Taught sailing to children and young adults in team-based environments.",
+      "Developed leadership, communication, and instructional skills.",
+      "Worked closely with other instructors to ensure safety and collaboration."
+    ]
+  },
+  {
+    "id": "dandelion",
+    "title": "UI & UX Lead Designer and Programmer",
+    "subtitle": "Dandelion Developers",
+    "period": "2025-Present",
+    "description": [
+      "Designs and implements UI",
+      "row2",
+      "row3"
+    ],
+    "projectsIDs": [
+      "NSH"
+    ]
+  }
+]

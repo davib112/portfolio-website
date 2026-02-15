@@ -1,0 +1,43 @@
+{
+	"name": "carl-nordholm-portfolio",
+	"version": "0.1.0",
+	"homepage": "https://davib112.github.io/portfolio-website",
+	"private": true,
+	"scripts": {
+		"predeploy": "npm run clean && npm run build && npm run gitMain && npm run gitAdd && npm run gitCommit",
+		"deploy": "gh-pages -d build -f",
+		"postdeploy": "npm run gitDestash",
+
+		"dev": "npm run gitMain && next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+
+		"clean": "npm run cleanCache && npm run cleanNext npm run cleanBuild",
+		"cleanCache": "if exist node_modules\\.cache\\gh-pages del /s /q node_modules\\.cache\\gh-pages",
+		"cleanNext": "if exist .next rmdir del /s /q .next",
+		"cleanBuild": "if exist build rmdir del /s /q build",
+
+		"gitMain": "git checkout main",
+		"gitAdd": "git add --All",
+		"gitCommit": "git stash push -m \"Temporary stash before gh-pages deploy\"",
+		"gitDestash": "git stash pop"
+
+	},
+	"dependencies": {
+		"next": "^15.5.6",
+		"prism-react-renderer": "^2.4.1",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@types/node": "^20.19.22",
+		"@types/react": "^19.2.2",
+		"@types/react-dom": "^19.2.2",
+		"eslint": "^9.38.0",
+		"eslint-config-next": "^15.5.6",
+		"gh-pages": "^6.3.0",
+		"typescript": "^5.9.3"
+	}
+}

@@ -1,0 +1,161 @@
+.Intro {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border: 4px solid var(--accent-color);
+	border-radius: 6px;
+	margin: auto auto;
+	width: 90%;
+	max-width: 1000px;
+	background-color: var(--bg-color-2);
+	color: var(--text-color);
+	white-space: pre-line;
+}
+
+.AreaParent {
+	display: inline-grid;
+	grid-template-columns: 70% 30%;
+	
+}
+
+.LeftArea {
+	text-align: left;
+	margin-right: 6px;
+	border-right: 4px solid var(--accent-color);
+	padding-right: 8px;
+}
+@media (max-width: 700px) {
+	.AreaParent {
+		display: inline-grid;
+		grid-template-columns: 100%;
+	}
+	.LeftArea {
+		margin-right: 0px;
+		border-right: 0px none;
+		padding-right: 0px;
+		
+		padding-bottom: 6px;
+		border-bottom: 4px solid var(--accent-color);
+	}
+}
+
+.RightArea {
+	text-align: left;
+	margin-left: 6px;
+	display: inline-grid;
+	grid-template-columns: 100%;
+	grid-auto-rows: min-content;
+}
+	.RightArea div {
+		display: inline-grid;
+		grid-template-columns: 50px auto;
+		margin-top:1vh;
+	}
+
+	.RightArea img {
+		height: 28px;
+	}
+
+.Nav{
+	margin-top:8px;
+}
+
+.Nav a {
+	color: var(--text-color);
+}
+
+.Section {
+	border: 4px solid var(--accent-color);
+	border-radius: 6px;
+	padding: 1rem;
+	margin: 2rem auto;
+	width: 90%;
+	max-width: 1400px;
+	gap: 1rem;
+	background-color: var(--bg-color-2);
+	color: var(--text-color);
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	white-space: pre-line;
+
+	/*So that <a> link has correct offset*/
+	scroll-margin-top: var(--section-height-link-offset);
+}
+
+@media (max-width: 700px) {
+	.Section {
+	  flex-direction: column;
+	  text-align: center;
+	}
+}
+
+.TextPart {
+	flex: 1 1 60%; /* take up to ~60% of space */
+	padding: 0 10px;
+	align-self: start;
+}
+
+.ImageSection img,
+.VideoSection video {
+  flex: 0 1 40%;     /* only take up to ~40% */
+  max-width: 100%;   /* scale down within their flex area */
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Optional centering */
+.ImageSection,
+.VideoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.CodeSection {
+	flex: 0 1 60%;
+	
+}
+
+.CodeSection .TextPart {
+	flex: 1 1 40%; /* take up to ~60% of space */
+	padding: 0 10px;
+}
+
+.ParentSection {
+	flex-direction: column;
+	align-items:stretch;
+}
+
+.TextPart img{ /*These are for the dropdown icons*/
+	height:1rem;
+}
+
+
+
+
+.CollapsibleBody {
+	overflow: hidden;
+	transition: max-height 750ms ease, opacity 500ms linear;
+	max-height: 0;
+	opacity: 0;
+	
+}
+
+.CollapsibleBodyOpen {
+	opacity: 1;
+	max-height: max-content;
+}
+
+.rotate90 {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
