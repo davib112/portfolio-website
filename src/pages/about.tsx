@@ -49,13 +49,13 @@ export default function About() {
 						target="_blank"
 					>
 						<img
-							src="/portfolio-website/media/icons/linkedin.svg"
+							src="/media/icons/linkedin.svg"
 							alt="LinkedIn"
 						/>
 					</a>
 						<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 							<img
-								src="/portfolio-website/media/icons/Mail.svg"
+								src="/media/icons/Mail.svg"
 								alt="Mail" 
 							/>
 						</a></div>
@@ -64,7 +64,7 @@ export default function About() {
 				</div>
 
 				<div className={AboutStyle.AboutImage}>
-					<img src="/portfolio-website/media/test/ducky.png" />
+					<img src="/media/test/ducky.png" />
 				</div>
 				<div className={AboutStyle.AboutSkills}>
 					<h2>SKILLS</h2>

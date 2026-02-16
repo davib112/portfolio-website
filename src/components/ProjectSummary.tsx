@@ -38,7 +38,7 @@ export default function ProjectSummary({
                     {project.devTime !== "0" && (
                         <div className={summaryStyle.OnVideoGroup}>
                             <img
-                                src="/portfolio-website/media/icons/clock.svg"
+                                src="/media/icons/clock.svg"
                                 alt="Dev Time:"
                             />
                             <p>{project.devTime}</p>
@@ -47,7 +47,7 @@ export default function ProjectSummary({
                     {project.groupSize && project.groupSize!="0" && (
                         <div className={summaryStyle.OnVideoGroup}>
                             <img
-                                src="/portfolio-website/media/icons/group.svg"
+                                src="/media/icons/group.svg"
                                 alt="Group Size: "
                             />
                             <p>{project.groupSize}</p>
@@ -55,7 +55,7 @@ export default function ProjectSummary({
                     )}
 
                     <div className={summaryStyle.OnVideoGroup}>
-                        <img src="/portfolio-website/media/icons/engine.svg" alt="Engine: " />
+                        <img src="/media/icons/engine.svg" alt="Engine: " />
                         <p>{project.engine}</p>
                     </div>
                 </div>

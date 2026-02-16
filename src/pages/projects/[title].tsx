@@ -76,7 +76,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 						{project.devTime !== "0" && (
 							<div>
 								<img
-									src="/portfolio-website/media/icons/clock.svg"
+									src="/media/icons/clock.svg"
 									alt="Dev Time:"
 								/>
 								<p>{project.devTime}</p>
@@ -85,7 +85,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 						{project.groupSize && project.groupSize != "0" && (
 							<div>
 								<img
-									src="/portfolio-website/media/icons/group.svg"
+									src="/media/icons/group.svg"
 									alt="Group Size: "
 								/>
 								<p>{project.groupSize}</p>
@@ -93,7 +93,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 						)}
 
 						<div>
-							<img src="/portfolio-website/media/icons/engine.svg" alt="Engine: " />
+							<img src="/media/icons/engine.svg" alt="Engine: " />
 							<p>{project.engine}</p>
 						</div>
 					</div>
@@ -324,9 +324,9 @@ function CollapsibleBody({
 
 function DropdownIcon({ isDown }: { isDown: boolean }) {
 	if (isDown) {
-		return (<img src="/portfolio-website/media/icons/dropdown.svg" alt="dropdown" />);
+		return (<img src="/media/icons/dropdown.svg" alt="dropdown" />);
 	}
 	else {
-		return (<img className={ProjectStyle.rotate90} src="/portfolio-website/media/icons/dropdown.svg" alt="dropdown" />);
+		return (<img className={ProjectStyle.rotate90} src="/media/icons/dropdown.svg" alt="dropdown" />);
 	}
 }

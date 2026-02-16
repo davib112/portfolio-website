@@ -28,7 +28,7 @@ export default function SiteHeader() {
 									target="_blank"
 								>
 									<img
-										src="/portfolio-website/media/icons/linkedin.svg"
+										src="/media/icons/linkedin.svg"
 										alt="LinkedIn"
 									></img>
 								</a>
@@ -36,7 +36,7 @@ export default function SiteHeader() {
 							<li>
 								<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 									<img
-										src="/portfolio-website/media/icons/mail.svg"
+										src="/media/icons/mail.svg"
 										alt="Mail"
 									></img>
 								</a>
@@ -46,7 +46,7 @@ export default function SiteHeader() {
 									<button>
 										Resumé
 										<img
-											src="/portfolio-website/media/icons/newTab.svg"
+											src="/media/icons/newTab.svg"
 											alt="Download "
 										/>
 									</button>
@@ -60,7 +60,7 @@ export default function SiteHeader() {
 						onClick={toggleHamburgerMenu}
 					>
 						<img
-							src="/portfolio-website/media/icons/dropdown.svg"
+							src="/media/icons/dropdown.svg"
 							alt="LinkedIn"
 						></img>
 					</a>
@@ -79,7 +79,7 @@ export default function SiteHeader() {
 								target="_blank"
 							>
 								<img
-									src="/portfolio-website/media/icons/linkedin.svg"
+									src="/media/icons/linkedin.svg"
 									alt="LinkedIn"
 								/>
 								LinkedIn
@@ -89,7 +89,7 @@ export default function SiteHeader() {
 						<li>
 							<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 								<img
-									src="/portfolio-website/media/icons/Mail.svg"
+									src="/media/icons/Mail.svg"
 									alt="Mail"
 								/>Mail
 							</a>
@@ -97,7 +97,7 @@ export default function SiteHeader() {
 						<li>
 							<a href="/CV_Carl_Nordholm.pdf" download>
 								<img
-									src="/portfolio-website/media/icons/download.svg"
+									src="/media/icons/download.svg"
 									alt="Download "
 								/>
 								Resumé

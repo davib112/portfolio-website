@@ -25,7 +25,7 @@ export default function App() {
                 </div>
                 <div className={indexStyle.rightItem}>
                     <img
-                        src="/portfolio-website/media/other/Carl_Nordholm_Portrait.png"
+                        src="/media/other/Carl_Nordholm_Portrait.png"
                         alt="LinkedIn"
                     ></img>
                 </div>

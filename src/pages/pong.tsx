@@ -236,7 +236,7 @@ export default function Pong() {
 						<>
 							<button className={PongStyle.playButton} onClick={SwitchPlaying}>
 								<img className={PongStyle.playImage}
-									src="/portfolio-website/media/pong/play.png"
+									src="/media/pong/play.png"
 									alt="Play" />
 
 							</button>

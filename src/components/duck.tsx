@@ -22,7 +22,7 @@ export default function Duck() {
     return (
     
         <div className={duckStyle.duck} style={{ top: pos.y - remToPx(3), left: pos.x - remToPx(3) }}>
-            <img src={"/portfolio-website/media/test/ducky.png"} />
+            <img src={"/media/test/ducky.png"} />
         </div>)
         */
 }

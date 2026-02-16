@@ -6,9 +6,8 @@
 	"scripts": {
 		"predeploy": "npm run clean && npm run gitCheck && npm run build",
 		"deploy": "gh-pages -d build -f",
-		"postdeploy": "npm run gitDestash",
 
-		"dev": "npm run gitMain && next dev --turbopack",
+		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
