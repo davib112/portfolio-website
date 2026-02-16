@@ -13,11 +13,11 @@
 		"lint": "next lint",
 
 		"clean": "npm run cleanCache && npm run cleanNext && npm run cleanBuild",
-		"cleanCache": "if exist node_modules\\.cache\\gh-pages del /s /q node_modules\\.cache\\gh-pages",
+		"cleanCache": "if exist node_modules\\.cache\\gh-pages rmdir /s /q node_modules\\.cache\\gh-pages",
 		"cleanNext": "if exist .next rmdir /s /q .next",
 		"cleanBuild": "if exist build rmdir /s /q build",
 
-		"gitCheck": "git diff-index --quiet HEAD -- || (echo git ERROR: Working tree not clean, submit changes && exit 1)"
+		"gitCheck": "git diff-index --quiet HEAD -- || (echo git ERROR: Working tree not clean, submit changes && exit /b 1)"
 
 	},
 	"dependencies": {
