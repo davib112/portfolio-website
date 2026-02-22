@@ -90,7 +90,7 @@ export default function SiteHeader() {
 						<li>
 							<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 								<img
-									src={`${basePath}/media/icons/Mail.svg`}
+									src={`${basePath}/media/icons/mail.svg`}
 									alt="Mail"
 								/>Mail
 							</a>

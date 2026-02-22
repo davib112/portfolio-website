@@ -292,10 +292,6 @@
 			"link": "/media/test/testLink.mp4"
 		},
 		"introduction": "This project is a browser-based Pong clone developed to deepen my understanding of React and TypeScript. Rather than following tutorials, I chose to build a complete, interactive game—my preferred way of learning—focusing on game logic, rendering, and lightweight AI while keeping the experience instantly playable directly on the website.",
-		"introVideo": {
-			"name": "TestLink",
-			"link": "/media/snabb_grabb/showcase_spes.mp4"
-		},
 		"devTime": "2 days",
 		"engine": "React, TypeScript",
 		"genre": "Pong",
@@ -480,7 +476,7 @@
 						"explenation": "Double Jumping works as a mid-air extension of the base jump. I designed it to be non-intrusive by applying an upward impulse while maintaining the player's current horizontal velocity and full input control.\n\nThis allows for precise mid-air course corrections and vertical height gains without killing the momentum of a run.",
 						"video": {
 							"name": "Double Jump Showcase",
-							"link": "/media/snabb_grabb/Double_Jump.mp4"
+							"link": "/media/snabb_grabb/double_jump.mp4"
 						}
 					},
 					{
@@ -580,7 +576,6 @@
 		"groupSize": 17,
 		"sections": []
 	},
-
 	{
 		"title": "Spite",
 		"displayTitle": "Spite: Eternal Night",
@@ -606,7 +601,7 @@
 		"summary": "A compact action game where you play as a fast and agile bird, dashing and striking to defeat towering rock golems, developed as a student project.",
 		"summaryVideo": {
 			"name": "SnabbGrabbIntro",
-			"link": "/media/aeon/Aeon_IntroVideo.mp4"
+			"link": "/media/aeon/aeon_intro.mp4"
 		},
 		"introduction": "Aeon is a top-down, Diablo-style action game developed using TGE, the custom engine of The Game Assembly. The story follows a small hero navigating a world where time and space have been disrupted, requiring them to battle golems and overcome environmental obstacles. As a Gameplay and Tools Programmer, I focused on building the foundational movement and collision systems that defined the player experience within the engine.",
 		"introVideo": {
@@ -623,7 +618,7 @@
 				"explenation": "The Grid Collision system was the backbone of all movement in Aeon, ensuring entities stayed within the boundaries of the game’s floating islands. To make the system accessible for the team, I implemented a simple tagging workflow that allowed level designers to apply collision logic to existing objects and change tiles during runtime. This focus on usability ensured that the technical constraints of the grid never hindered the creative process of level building.",
 				"video": {
 					"name": "Fast AI",
-					"link": "/media/aeon/Aeon_GridCol.mp4"
+					"link": "/media/aeon/aeon_grid.mp4"
 				}
 			},
 			{
@@ -635,7 +630,7 @@
 						"explenation": "A specific challenge during development was how the player interacted with verticality. I implemented a system that utilized smooth lerping between height layers, but also accounted for side-approach logic. This allowed the player to take their first few steps onto a staircase from the side for a more natural feel, while preventing them from jumping up the entire height of the stairs from the side, which maintained the physical integrity of the level.",
 						"video": {
 							"name": "Fast AI",
-							"link": "/media/aeon/Aeon_PlayerMov.mp4"
+							"link": "/media/aeon/aeon_player.mp4"
 						}
 					},
 					{
@@ -653,7 +648,7 @@
 				"explenation": "To enhance the visual feedback of the world, I created a lightweight, CPU-based particle system. While kept simple to maximize development efficiency, it was used effectively for entity trails and environmental destruction. Most importantly, it served a gameplay purpose by providing a clear visual indicator when an enemy noticed the player, bridging the gap between art and mechanical feedback.",
 				"video": {
 					"name": "Fast AI",
-					"link": "/media/aeon/Aeon_ParticleSys.mp4"
+					"link": "/media/aeon/aeon_particle.mp4"
 				}
 			}
 		]
@@ -704,7 +699,7 @@
 				"explenation": "The game features a dynamic day-night cycle driven by a rotating directional light system. I tuned the cycle to provide a 2:1 ratio of daylight to darkness, creating a grace period for resource gathering before the lighthouse becomes a critical requirement. Technically, the lighthouse acts as the primary fail-state; if the battery is not maintained through the night, the player loses. This system also drives visual feedback, illuminating ships in the distance only when the lighthouse beam is active, reinforcing the player’s purpose.",
 				"video": {
 					"name": "Lighthouse Spinning",
-					"link": "/media/aeon/Aeon_ParticleSys.mp4"
+					"link": "/media/lighthouse/night.mp4"
 				}
 			},
 			{
@@ -712,7 +707,7 @@
 				"explenation": "The core gameplay loop centers on high-stakes crop management. Each plant type is defined by variables including growth time, yield, nutritional value, and electrical recharge capacity. I implemented a scaling growth system with a UI progress overlay to provide clear feedback. This forced players into strategic decision-making: choosing between slow-growing, high-yield investment crops or quick-growing, low-yield varieties for immediate survival, creating a constant tension between long-term planning and short-term needs.",
 				"video": {
 					"name": "Plants growing",
-					"link": "/media/aeon/Aeon_ParticleSys.mp4"
+					"link": "/media/lighthouse/grow.mp4"
 				}
 			},
 			{
