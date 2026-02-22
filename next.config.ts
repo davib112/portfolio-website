@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 	output: 'export',
 	distDir: 'build',
 	basePath: isProd ? '/portfolio-website' : "",
-	assetPrefix: isProd ? '/portfolio-website/': "", // include extra folder
+	//assetPrefix: isProd ? '/portfolio-website/': "", // include extra folder
 };
 
 export default nextConfig;
