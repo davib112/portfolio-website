@@ -1,0 +1,18 @@
+.errorParent
+{
+    padding: 1rem;
+    border: 4px solid var(--accent-color);
+    border-radius: 6px;
+    margin: 2rem auto auto auto;
+    width: 80%;
+    max-width: 900px;
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
+    text-align: left;
+    padding: 20px;
+    padding-right: 40px;
+}
+.errorParent a
+{
+    color: var(--text-color);
+}

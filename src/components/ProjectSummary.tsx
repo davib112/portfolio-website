@@ -32,7 +32,7 @@ export default function ProjectSummary({
                     playsInline
                     className={summaryStyle.Video}
                 >
-                    <source src={project.summaryVideo.link} />
+                    <source src={`${basePath}${project.summaryVideo.link}`} />
                     Sorry, your browser does not support the video tag.
                 </video>
                 <div className={summaryStyle.OnVideoText}>

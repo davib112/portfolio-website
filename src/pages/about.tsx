@@ -56,7 +56,7 @@ export default function About() {
 						</a>
 						<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 							<img
-								src={`${basePath}/media/icons/Mail.svg`}
+								src={`${basePath}/media/icons/mail.svg`}
 								alt="Mail"
 							/>
 						</a></div>
@@ -84,9 +84,9 @@ export default function About() {
 					</div>
 				</div>
 			</div>
-			<div className={ProjectStyle.Section}>
+			{/*<div className={ProjectStyle.Section}>
 				TODO: ADD MY VIEW ON AI
-			</div>
+			</div>*/}
 
 			<div className={ProjectStyle.Section}>
 				<Timeline times={timeSlots} />

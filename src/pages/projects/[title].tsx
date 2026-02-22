@@ -34,7 +34,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 					<iframe
 						width="100%"
 						style={{ aspectRatio: "16 / 9" }}
-						src={`${basePath}${project.introVideo.link}`}
+						src={project.introVideo.link}
 						title="YouTube video player"
 						frameBorder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

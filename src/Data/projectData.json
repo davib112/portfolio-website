@@ -5,7 +5,7 @@
 		"summary": "A custom C++ game engine developed over six months by a small student team at TGA, built alongside the games that used it and improved iteratively across multiple projects.",
 		"summaryVideo": {
 			"name": "LarmetGickAbout",
-			"link": "/media/LarmetGick/Showcase_larmet.mp4"
+			"link": "/media/larmet_gick/Showcase_larmet.mp4"
 		},
 		"introduction": "CrackEngine is a custom C++ game engine developed over six months by a small TGA student team, built in parallel with several student game projects. It features a full rendering pipeline built on DirectX 11, integrated physics, flexible gameplay systems, and editor support. The engine was iteratively improved project by project, enabling rapid prototyping, reliable reuse of core systems, and efficient iteration on gameplay features.",
 		"introVideo": {
@@ -68,7 +68,7 @@
 						"explenation": "Diagram showing the hierarchy of GameObjects and Components in CrackEngine.",
 						"image": {
 							"name": "GameObjectComponentDiagram",
-							"link": "/media/crackengine/GameObjectComponentDiagram.png"
+							"link": "/media/test/ducky.png"
 						}
 					}
 				]
@@ -98,7 +98,7 @@
 						"explenation": "The editor supports robust drag-and-drop workflows, both internally and from the operating system. Assets such as models and textures can be dragged directly from Windows Explorer into the editor, where they are imported and instantiated using the engine’s asset and component systems.\n\nThe hierarchy view fully supports parent–child relationships. GameObjects can be reparented via drag-and-drop, with local and world transforms recalculated automatically to preserve spatial consistency. This behavior is driven by the engine’s transform and math systems, ensuring correct position, rotation, and scale propagation across complex hierarchies rather than relying on editor-specific overrides.",
 						"video": {
 							"name": "Gameobject Drag & Drop",
-							"link": "/media/Aeon/Aeon_PlayerMov.mp4"
+							"link": "/media/aeon/Aeon_PlayerMov.mp4"
 						},
 						"textArea": "left"
 					},
@@ -188,7 +188,7 @@
 						"explenation": "To support development and verification of the physics system, the engine streams live simulation data to the PhysX Visual Debugger in debug builds. This provided deep visibility into the physics scene, making it possible to inspect simulation state, collision filtering, and actor behavior directly within PhysX’s tooling.\n\nIn addition to simulation and collision handling, the engine exposes filtered raycasts, sweeps, and overlap queries at the engine level. These are thin wrappers around PhysX functionality and use the same filtering setup as the simulation, ensuring consistent and predictable behavior across all physics interactions.",
 						"video": {
 							"name": "PhysX Debugger & In-Game Comparison",
-							"link": "/media/CrackEngine/physx_debug_showcase.mp4"
+							"link": "/media/crack_engine/physx_debug_showcase.mp4"
 						}
 					}
 				]
@@ -294,7 +294,7 @@
 		"introduction": "This project is a browser-based Pong clone developed to deepen my understanding of React and TypeScript. Rather than following tutorials, I chose to build a complete, interactive game—my preferred way of learning—focusing on game logic, rendering, and lightweight AI while keeping the experience instantly playable directly on the website.",
 		"introVideo": {
 			"name": "TestLink",
-			"link": "/media/snabb-grabb/showcase_spes.mp4"
+			"link": "/media/snabb_grabb/showcase_spes.mp4"
 		},
 		"devTime": "2 days",
 		"engine": "React, TypeScript",
@@ -355,12 +355,12 @@
 		"summary": "A fast-paced 3D platformer inspired by Neon White, where players use a card-based movement system to speedrun through levels. Developed at TGA, the game focuses on precision, flow, and pushing for the fastest time.",
 		"summaryVideo": {
 			"name": "SnabbGrabbIntro",
-			"link": "/media/snabb-grabb/showcase_spes.mp4"
+			"link": "/media/snabb_grabb/showcase_spes.mp4"
 		},
 		"introduction": "Neon White is defined by its lightning-fast pace and the strategic burning of resources. In Snabb Grabb, I translated this loop into a modular state machine where every card functions as both a combat tool and a key for traversal.\n\nThis page highlights my primary focuses during the project, specifically the intersection of physics and player agency. While these sections cover the core movement and card systems, they represent a focused look at a much broader development process. This involved custom engine integration and systems architecture that supported the game's high-speed requirements.",
 		"introVideo": {
 			"name": "SnabbGrabbIntro",
-			"link": "/media/snabb-grabb/showcase_spes.mp4"
+			"link": "/media/snabb_grabb/showcase_spes.mp4"
 		},
 		"devTime": "10 Weeks (75%)",
 		"engine": "CrackEngine, C++",
@@ -450,7 +450,7 @@
 						"explenation": "A core mechanic of the game is that every enemy must be defeated to pass a level. To facilitate this at high speeds, I implemented custom hurtboxes that activate during movement abilities. Hitting an enemy with these volumes results in an instant kill, allowing the player to maintain their momentum without having to slow down. \n\nThese volumes are tailored to the action, such as wide boxes for dashes or spheres for ground slams. This system is a primary tool for speedrunning, as it allows players to combine precise timing and smart movement with projectile combat to find the most efficient route through a level.",
 						"video": {
 							"name": "Ability Hurtbox Showcase",
-							"link": "/media/snabb-grabb/hurtbox.mp4"
+							"link": "/media/snabb_grabb/hurtbox.mp4"
 						}
 					},
 					{
@@ -472,7 +472,7 @@
 						"explenation": "The Ground Slam causes the player to descend at a consistent high speed until they hit an object. To make the ability feel satisfying, I implemented a brief buildup pause on activation to convey weight and force.\n\nThis pause provides a visual tell for the spherical hurtbox that triggers on impact. This hurtbox destroys enemies and environmental objects in the landing zone, rewarding the player for aggressive vertical movement.",
 						"video": {
 							"name": "Ground Slam Showcase",
-							"link": "/media/snabb-grabb/stomp.mp4"
+							"link": "/media/snabb_grabb/stomp.mp4"
 						}
 					},
 					{
@@ -480,7 +480,7 @@
 						"explenation": "Double Jumping works as a mid-air extension of the base jump. I designed it to be non-intrusive by applying an upward impulse while maintaining the player's current horizontal velocity and full input control.\n\nThis allows for precise mid-air course corrections and vertical height gains without killing the momentum of a run.",
 						"video": {
 							"name": "Double Jump Showcase",
-							"link": "/media/snabb-grabb/Double_Jump.mp4"
+							"link": "/media/snabb_grabb/Double_Jump.mp4"
 						}
 					},
 					{
@@ -488,7 +488,7 @@
 						"explenation": "I developed two distinct dashes: a straightforward horizontal dash for simpler navigation and a directional dash that provides full 3D control.\n\nA significant issue during development was that abilities would end abruptly, causing an instant halt that felt jarring. To solve this, I introduced a customizable falloff force. This force smooths out the transition back to standard movement, allowing the player to carry their speed into the next action.",
 						"video": {
 							"name": "Dashing Showcase",
-							"link": "/media/snabb-grabb/dash.mp4"
+							"link": "/media/snabb_grabb/dash.mp4"
 						}
 					},
 					{
@@ -496,7 +496,7 @@
 						"explenation": "The Grappling Hook uses raycasting to detect objects within range and pulls the player directly toward the hit point to provide a speed boost.\n\nThis feature opens up a multitude of creative possibilities. It serves as a reliable tool for gaining height or closing distances quickly, which is ideal for crafting a diverse range of level shortcuts.",
 						"video": {
 							"name": "Grapple Showcase",
-							"link": "/media/snabb-grabb/grapple.mp4"
+							"link": "/media/snabb_grabb/grapple.mp4"
 						}
 					},
 					{
@@ -504,7 +504,7 @@
 						"explenation": "The teleport ability is restricted to targeting enemies via raycasting. Simply transporting the player to the target's position felt disorienting and lacked impact.\n\nTo address this, the ability moves the player close to the enemy and then finishes with a dashing motion. This dash provides a more engaging transition and ensures the player clearly understands they successfully hit the enemy before they move on to their next target.",
 						"video": {
 							"name": "Teleport Showcase",
-							"link": "/media/snabb-grabb/teleport.mp4"
+							"link": "/media/snabb_grabb/teleport.mp4"
 						}
 					},
 					{
@@ -512,7 +512,7 @@
 						"explenation": "The Bomb is the most complex ability, repurposing the bullet sweep logic to trigger an explosion on impact. When caught in the blast, the player is propelled upward by a predetermined amount influenced by current velocity.\n\nThe horizontal displacement is determined by the player's distance from the explosion center. This distance-based calculation allows skilled players to use the blast for massive level skips and advanced routing.",
 						"video": {
 							"name": "Bomb Showcase",
-							"link": "/media/snabb-grabb/bomb.mp4"
+							"link": "/media/snabb_grabb/bomb.mp4"
 						}
 					}
 				]

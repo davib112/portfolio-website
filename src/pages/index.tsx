@@ -14,7 +14,7 @@ import summaryStyle from "@/components/ProjectSummary.module.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export default function App() {
+export default function Ap p() {
     //https://architextures.org/textures/831
     return (
         <div className="Site">
@@ -29,7 +29,7 @@ export default function App() {
 
                     <img
                         src={`${basePath}/media/other/Carl_Nordholm_Portrait.png`}
-                        alt="LinkedIn"
+                        alt="Portrait"
                     ></img>
                 </div>
                 <div className={indexStyle.buttonBar}>
