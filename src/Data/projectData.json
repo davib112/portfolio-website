@@ -289,7 +289,11 @@
 		"summary": "A fully playable Pong game built for the website as a hands-on way to learn React and TypeScript. The project focuses on implementing game logic, physics, and AI directly in the browser.",
 		"summaryVideo": {
 			"name": "TestLink",
-			"link": "/media/test/testLink.mp4"
+			"link": "/media/pong/fast_pong.mp4"
+		},
+		"introVideo": {
+			"name": "test",
+			"link": "/media/pong/fast_pong.mp4"
 		},
 		"introduction": "This project is a browser-based Pong clone developed to deepen my understanding of React and TypeScript. Rather than following tutorials, I chose to build a complete, interactive game—my preferred way of learning—focusing on game logic, rendering, and lightweight AI while keeping the experience instantly playable directly on the website.",
 		"devTime": "2 days",
