@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Project } from "@/ProjectInfo";
 
 import summaryStyle from "@/components/ProjectSummary.module.css";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function ProjectSummary({
     project,
@@ -38,16 +39,16 @@ export default function ProjectSummary({
                     {project.devTime !== "0" && (
                         <div className={summaryStyle.OnVideoGroup}>
                             <img
-                                src="/media/icons/clock.svg"
+                                src={`${basePath}/media/icons/clock.svg`}
                                 alt="Dev Time:"
                             />
                             <p>{project.devTime}</p>
                         </div>
                     )}
-                    {project.groupSize && project.groupSize!="0" && (
+                    {project.groupSize && project.groupSize != "0" && (
                         <div className={summaryStyle.OnVideoGroup}>
                             <img
-                                src="/media/icons/group.svg"
+                                src={`${basePath}/media/icons/group.svg`}
                                 alt="Group Size: "
                             />
                             <p>{project.groupSize}</p>
@@ -55,7 +56,7 @@ export default function ProjectSummary({
                     )}
 
                     <div className={summaryStyle.OnVideoGroup}>
-                        <img src="/media/icons/engine.svg" alt="Engine: " />
+                        <img src={`${basePath}/media/icons/engine.svg`} alt="Engine: " />
                         <p>{project.engine}</p>
                     </div>
                 </div>

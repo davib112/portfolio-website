@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import headerStyle from "./SiteHeader.module.css";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function SiteHeader() {
 	const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function SiteHeader() {
 									target="_blank"
 								>
 									<img
-										src="/media/icons/linkedin.svg"
+										src={`${basePath}/media/icons/linkedin.svg`}
 										alt="LinkedIn"
 									></img>
 								</a>
@@ -36,7 +37,7 @@ export default function SiteHeader() {
 							<li>
 								<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 									<img
-										src="/media/icons/mail.svg"
+										src={`${basePath}/media/icons/mail.svg`}
 										alt="Mail"
 									></img>
 								</a>
@@ -46,7 +47,7 @@ export default function SiteHeader() {
 									<button>
 										Resumé
 										<img
-											src="/media/icons/newTab.svg"
+											src={`${basePath}/media/icons/newTab.svg`}
 											alt="Download "
 										/>
 									</button>
@@ -60,12 +61,12 @@ export default function SiteHeader() {
 						onClick={toggleHamburgerMenu}
 					>
 						<img
-							src="/media/icons/dropdown.svg"
+							src={`${basePath}/media/icons/dropdown.svg`}
 							alt="LinkedIn"
 						></img>
 					</a>
 				</div>
-				
+
 			</div>
 			<div id="hamburgerMenu" className={`${headerStyle.hamburgerMenu} ${hamburgerMenuOpen ? headerStyle.HamburgerOpen : headerStyle.HamburgerClosed}`}>
 				<nav>
@@ -79,17 +80,17 @@ export default function SiteHeader() {
 								target="_blank"
 							>
 								<img
-									src="/media/icons/linkedin.svg"
+									src={`${basePath}/media/icons/linkedin.svg`}
 									alt="LinkedIn"
 								/>
 								LinkedIn
-								
+
 							</a>
 						</li>
 						<li>
 							<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 								<img
-									src="/media/icons/Mail.svg"
+									src={`${basePath}/media/icons/Mail.svg`}
 									alt="Mail"
 								/>Mail
 							</a>
@@ -97,7 +98,7 @@ export default function SiteHeader() {
 						<li>
 							<a href="/CV_Carl_Nordholm.pdf" download>
 								<img
-									src="/media/icons/download.svg"
+									src={`${basePath}/media/icons/download.svg`}
 									alt="Download "
 								/>
 								Resumé

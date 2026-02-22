@@ -12,11 +12,13 @@ import SiteFooter from "@/components/SiteFooter";
 import indexStyle from "@/pages/index.module.css"
 import summaryStyle from "@/components/ProjectSummary.module.css";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function App() {
     //https://architextures.org/textures/831
     return (
         <div className="Site">
-            <div className="background"/>
+            <div className="background" />
             <SiteHeader />
             <div className={indexStyle.intro}>
                 <div>
@@ -24,8 +26,9 @@ export default function App() {
                     <p>I am a Game Programmer with a deep curiosity for how systems function. I bring a steady and adaptable mindset to every project, rooted in a strong foundation of C++ and C# but always ready to master new technologies. My goal is to work closely with my team to bridge the gap between technical constraints and great gameplay, creating reliable solutions that everyone can build upon.</p>
                 </div>
                 <div className={indexStyle.rightItem}>
+
                     <img
-                        src="/media/other/Carl_Nordholm_Portrait.png"
+                        src={`${basePath}/media/other/Carl_Nordholm_Portrait.png`}
                         alt="LinkedIn"
                     ></img>
                 </div>

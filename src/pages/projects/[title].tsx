@@ -17,6 +17,8 @@ import ProjectStyle from "@/projectStyle.module.css";
 import CodeSnippet from "@/components/CodeSnippet"
 import { useState, useEffect, useRef } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 
 export default function ProjectPage({ project }: { project: Project }) {
 	//Setup Sections
@@ -26,20 +28,13 @@ export default function ProjectPage({ project }: { project: Project }) {
 
 			<div className="background" />
 			<SiteHeader />
-			
-			<div className={ProjectStyle.Intro}>
-				{/*
-                <video loop autoPlay muted playsInline className={ProjectStyle.IntroVideo}>
-                    <source src={project.summaryVideo.link} />
-                    Sorry, your browser does not support the video tag.
-                </video>
-            */}
 
+			<div className={ProjectStyle.Intro}>
 				{project.introVideo.link.startsWith("https://") && (
 					<iframe
 						width="100%"
 						style={{ aspectRatio: "16 / 9" }}
-						src={project.introVideo.link}
+						src={`${basePath}${project.introVideo.link}`}
 						title="YouTube video player"
 						frameBorder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,7 +50,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 						playsInline
 						className={ProjectStyle.IntroVideo}
 					>
-						<source src={project.summaryVideo.link} />
+						<source src={`${basePath}${project.summaryVideo.link}`} />
 						Sorry, your browser does not support the video tag.
 					</video>
 				)}
@@ -64,19 +59,19 @@ export default function ProjectPage({ project }: { project: Project }) {
 					<div className={ProjectStyle.LeftArea}>
 						<p>{project.introduction}</p>
 						<nav className={ProjectStyle.Nav}>
-							
+
 							{project.sections?.map((section) => (
-								<a key={section.name} href={"#"+section.name}>{section.name}<br/></a>
+								<a key={section.name} href={"#" + section.name}>{section.name}<br /></a>
 							))
 							}
 						</nav>
 					</div>
-					
+
 					<div className={ProjectStyle.RightArea}>
 						{project.devTime !== "0" && (
 							<div>
 								<img
-									src="/media/icons/clock.svg"
+									src={`${basePath}/media/icons/clock.svg`}
 									alt="Dev Time:"
 								/>
 								<p>{project.devTime}</p>
@@ -85,7 +80,7 @@ export default function ProjectPage({ project }: { project: Project }) {
 						{project.groupSize && project.groupSize != "0" && (
 							<div>
 								<img
-									src="/media/icons/group.svg"
+									src={`${basePath}/media/icons/group.svg`}
 									alt="Group Size: "
 								/>
 								<p>{project.groupSize}</p>
@@ -93,22 +88,21 @@ export default function ProjectPage({ project }: { project: Project }) {
 						)}
 
 						<div>
-							<img src="/media/icons/engine.svg" alt="Engine: " />
+							<img src={`${basePath}/media/icons/engine.svg`} alt="Engine: " />
 							<p>{project.engine}</p>
 						</div>
 					</div>
-				
+
 				</div>
-				
+
 			</div>
-			
+
 			<Sections sections={project.sections} />
 
 		</div>
 	);
 }
-export function Sections({ sections}: { sections?: ProjectSection[]})
-{
+export function Sections({ sections }: { sections?: ProjectSection[] }) {
 	return (
 		sections != null &&
 		sections.map((section, index) => {
@@ -148,7 +142,7 @@ export function Sections({ sections}: { sections?: ProjectSection[]})
 				default:
 					return null;
 			}
-			
+
 		}));
 }
 
@@ -191,7 +185,7 @@ export function ImageSection({ section }: { section: ProjectImageSection }) {
 			</div>
 			<CollapsibleBody open={open}>
 				<div className={ProjectStyle.MediaWrap}>
-					<img src={(section as ProjectImageSection).image.link} />
+					<img src={`${basePath}${(section as ProjectImageSection).image.link}`} />
 				</div>
 			</CollapsibleBody >
 		</div>
@@ -215,14 +209,14 @@ export function VideoSection({ section }: { section: ProjectVideoSection }) {
 				</CollapsibleBody>
 			</div>
 			<CollapsibleBody open={open}>
-			<div className={ProjectStyle.MediaWrap}>
-				<video
-					loop
-					autoPlay
-					muted
-					playsInline
-					src={(section as ProjectVideoSection).video.link}
-				/>
+				<div className={ProjectStyle.MediaWrap}>
+					<video
+						loop
+						autoPlay
+						muted
+						playsInline
+						src={`${basePath}${(section as ProjectVideoSection).video.link}`}
+					/>
 				</div>
 			</CollapsibleBody>
 		</div>
@@ -324,9 +318,9 @@ function CollapsibleBody({
 
 function DropdownIcon({ isDown }: { isDown: boolean }) {
 	if (isDown) {
-		return (<img src="/media/icons/dropdown.svg" alt="dropdown" />);
+		return (<img src={`${basePath}/media/icons/dropdown.svg`} alt="dropdown" />);
 	}
 	else {
-		return (<img className={ProjectStyle.rotate90} src="/media/icons/dropdown.svg" alt="dropdown" />);
+		return (<img className={ProjectStyle.rotate90} src={`${basePath}/media/icons/dropdown.svg`} alt="dropdown" />);
 	}
 }

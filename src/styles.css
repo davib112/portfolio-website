@@ -8,7 +8,7 @@
 }
 .background {
 	filter: blur(4px);
-	background-image: url("/media/test/limestone.jpg");
+	background-image: var(--background-path);
 	animation: mymove 200000s infinite linear;
 	width: 110vw;
 	height: 110vh;

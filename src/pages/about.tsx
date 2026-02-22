@@ -9,6 +9,7 @@ const timeSlots = rawTimeSlots as TimeSlot[];
 import ProjectStyle from "@/projectStyle.module.css";
 import AboutStyle from "@/pages/about.module.css"
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function About() {
 	return (
@@ -43,28 +44,28 @@ export default function About() {
 
 					<h3>Want to contact me?</h3>
 					<p>If you&apos;re interested in working together, discussing game development, or simply talking about sailing, feel free to reach out. I enjoy thoughtful conversations and connecting with people who share an interest in building strong teams and well-crafted systems.</p>
-					<div className={AboutStyle.Contact }>
+					<div className={AboutStyle.Contact}>
 						<a
-						href="https://www.linkedin.com/in/carl-nordholm"
-						target="_blank"
-					>
-						<img
-							src="/media/icons/linkedin.svg"
-							alt="LinkedIn"
-						/>
-					</a>
+							href="https://www.linkedin.com/in/carl-nordholm"
+							target="_blank"
+						>
+							<img
+								src={`${basePath}/media/icons/linkedin.svg`}
+								alt="LinkedIn"
+							/>
+						</a>
 						<a href="mailto:nordholm.carl@gmail.com" aria-label="Send email">
 							<img
-								src="/media/icons/Mail.svg"
-								alt="Mail" 
+								src={`${basePath}/media/icons/Mail.svg`}
+								alt="Mail"
 							/>
 						</a></div>
 
-					
+
 				</div>
 
 				<div className={AboutStyle.AboutImage}>
-					<img src="/media/test/ducky.png" />
+					<img src={`${basePath}/media/test/ducky.png`} />
 				</div>
 				<div className={AboutStyle.AboutSkills}>
 					<h2>SKILLS</h2>
@@ -84,7 +85,7 @@ export default function About() {
 				</div>
 			</div>
 			<div className={ProjectStyle.Section}>
-			TODO: ADD MY VIEW ON AI
+				TODO: ADD MY VIEW ON AI
 			</div>
 
 			<div className={ProjectStyle.Section}>

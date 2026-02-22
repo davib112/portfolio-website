@@ -18,6 +18,7 @@ import type { Project } from "@/ProjectInfo";
 const projects = rawProjects as unknown as Project[];
 import { ImageSection, Sections } from "./projects/[title]";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const gameHeight: number = 80;
 const gameWidth: number = 80;
@@ -236,7 +237,7 @@ export default function Pong() {
 						<>
 							<button className={PongStyle.playButton} onClick={SwitchPlaying}>
 								<img className={PongStyle.playImage}
-									src="/media/pong/play.png"
+									src={`${basePath}/media/pong/play.png`}
 									alt="Play" />
 
 							</button>
@@ -273,7 +274,7 @@ export default function Pong() {
 
 				{/*Info Part */}
 				<Sections sections={project.sections} />
-				
+
 			</div>
 		</div>
 	);
