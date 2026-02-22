@@ -14,7 +14,7 @@ import summaryStyle from "@/components/ProjectSummary.module.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export default function Ap p() {
+export default function App() {
     //https://architextures.org/textures/831
     return (
         <div className="Site">
