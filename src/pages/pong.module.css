@@ -92,23 +92,23 @@
 	grid-template-columns: auto auto auto;
 }
 .settingsSideArea {
-	text-align: center;
+	text-align: left;
 	color: var(--text-color);
 }
 
 .settingsSideArea h1 {
-	text-align: center;
+	text-align: left;
 	color: var(--accent-color);
 }
 .settingsSideArea h2 {
-	text-align: center;
+	text-align: left;
 	color: var(--accent-color);
 }
 
 .settingsGrid{
 	display: grid;
 	grid-template-columns: auto auto;
-	text-align: center;
+	text-align: left;
 	color: var(--text-color);
 }
 

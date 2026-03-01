@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import ProjectStyle from "@/projectStyle.module.css";
 import PongStyle from "@/pages/pong.module.css";
+import AnimStyle from "@/components/animatedComponents.module.css"
 
 import { Vector2 } from "@/components/math/Vector2";
 import { Collider } from "@/components/math/Collider";
@@ -251,13 +252,21 @@ export default function Pong() {
 					{/*Left Area*/}
 					<div className={PongStyle.settingsSideArea}>
 						<h1>Left Paddle</h1>
-						<input type="checkbox" checked={leftAi.current.on} onChange={toggleLeftAiOn} />Player Controlled : W/S
+						<label className={AnimStyle.checkBoxContainer}>
+							<input type="checkbox" checked={leftAi.current.on} onChange={toggleLeftAiOn} />
+							<span className={AnimStyle.checkmark} />
+							Player Controlled : W/S
+						</label>
 					</div>
 					{/*Center Area*/}
 					<div className={PongStyle.settingsSideArea}>
 						<h1>Additional Settings</h1>
-						<p><input type="checkbox" checked={drawLines} onChange={ToggleDrawLines} />Ball Debug Lines</p>
-						<p><input type="range" value={speedMultiplier} onChange={e => SetSpeedMultiplier(Number(e.target.value))} min="0.1" max="5" step="0.1" />Speed Multipler:{speedMultiplier}</p>
+						<label className={AnimStyle.checkBoxContainer}>
+							<input type="checkbox" checked={drawLines} onChange={ToggleDrawLines} />
+							<span className={AnimStyle.checkmark} />
+							Ball Debug Lines
+						</label>
+						<p><input type="range" value={speedMultiplier} onChange={e => SetSpeedMultiplier(Number(e.target.value))} min="0.1" max="5" step="0.1" />Speed Multipler: {speedMultiplier}</p>
 						<h2>Color Guide:</h2>
 						<p>White: Player Controlled</p>
 						<p>Yellow: Centering Mode</p>
@@ -267,7 +276,11 @@ export default function Pong() {
 					{/*Right Area*/}
 					<div className={PongStyle.settingsSideArea}>
 						<h1>Right Paddle</h1>
-						<input type="checkbox" checked={rightAi.current.on} onChange={toggleRightAiOn} />Player Controlled : I/K
+						<label className={AnimStyle.checkBoxContainer}>
+							<input type="checkbox" checked={rightAi.current.on} onChange={toggleRightAiOn} />
+							<span className={AnimStyle.checkmark} />
+							Player Controlled : I/K
+						</label>
 					</div>
 
 				</div>

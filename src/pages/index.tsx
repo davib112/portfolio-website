@@ -23,7 +23,8 @@ export default function App() {
             <div className={indexStyle.intro}>
                 <div>
                     <h3>Hi, I&apos;m Carl.</h3>
-                    <p>I am a Game Programmer with a deep curiosity for how systems function. I bring a steady and adaptable mindset to every project, rooted in a strong foundation of C++ and C# but always ready to master new technologies. My goal is to work closely with my team to bridge the gap between technical constraints and great gameplay, creating reliable solutions that everyone can build upon.</p>
+                    <p>I am a Game Programmer with a deep curiosity for how systems function. I bring a steady and adaptable mindset to every project, built on a strong foundation in C++ and C#, while always being ready to learn and master new technologies when needed. My goal is to work closely with my team to bridge the gap between technical constraints and great gameplay, creating reliable solutions that others can build upon.<br /><br />Below are snippets from some of my projects. They represent only small parts of the work within those projects and only some of the projects I have worked on, but they showcase approaches and solutions I enjoy building.
+                    </p>
                 </div>
                 <div className={indexStyle.rightItem}>
 

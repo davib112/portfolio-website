@@ -4,15 +4,18 @@ import rawProjects from "@/Data/projectData.json";
 import type { Project } from "@/ProjectInfo";
 
 const projects = rawProjects as unknown as Project[];
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Timeline({ times }: { times: TimeSlot[] }) {
-	
+
 	return (
 		<div className={tlStyle.TimelineBackground}>
 
 			{times.map((item) => (
 				<TimeLineSlot key={item.id} time={item} />
 			))}
-		</div> 
+		</div>
 	);
 }
 function TimeLineSlot({ time }: { time: TimeSlot }) {
@@ -22,11 +25,11 @@ function TimeLineSlot({ time }: { time: TimeSlot }) {
 				<span className={tlStyle.TimelineDot} />
 				<span className={tlStyle.TimelineLine} />
 			</div>
-			
+
 			<div className={tlStyle.TimelineContent}>
 				<h2>{time.title}</h2>
 				<div className={tlStyle.LeftContent}>
-					
+
 					<h4>{time.subtitle}</h4>
 					{time.period && <span className={tlStyle.TimelineDate}>{time.period}</span>}
 					<p>{time.description && time.description.join('\n')}</p>
@@ -34,15 +37,15 @@ function TimeLineSlot({ time }: { time: TimeSlot }) {
 				{
 					time.projectsIDs &&
 					<div className={tlStyle.RightContent}>
-					<h3>Projects</h3>
+						<h3>Projects</h3>
 
-					{time.projectsIDs.map((id) => (
-						<a key={id} className={tlStyle.TimelineLink} href={"/projects/" + id}>
-							{(projects.find(project => project.title == id))?.displayTitle}
-						<br /></a>
-						
-					))}
-				</div>}
+						{time.projectsIDs.map((id) => (
+							<a key={id} className={tlStyle.TimelineLink} href={`${basePath}/projects/${id}`}>
+								{(projects.find(project => project.title == id))?.displayTitle}
+								<br /></a>
+
+						))}
+					</div>}
 			</div>
 		</div>
 	);
