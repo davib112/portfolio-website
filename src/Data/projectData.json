@@ -702,7 +702,7 @@
 			"name": "SnabbGrabbIntro",
 			"link": "/media/test/testLink.mp4"
 		},
-		"introduction": "High Frontier is a space game",
+		"introduction": "The concept for Donkeys Inferno stems from the classic trope of the stubborn donkey. When Death claims the donkey's soul, the donkey simply refuses to go, leading the player on a journey into the depths of hell to steal their soul back and escape. This project was an exercise in tight platforming design and custom engine logic, with game metrics and responsiveness heavily inspired by the precision found in Hollow Knight.",
 		"introVideo": {
 			"name": "Donkey's Inferno Youtube Trailer",
 			"link": "https://www.youtube.com/embed/A5jJxE0OZMI"
@@ -711,7 +711,50 @@
 		"engine": "TGE, C++",
 		"genre": "Top-down diablo-style action game",
 		"groupSize": 12,
-		"sections": []
+		"sections": [
+			{
+				"name":"Custom Collision & AABB Management",
+				"explenation": "I developed this system within our custom school engine to handle Box-to-Box, Circle-to-Circle, and Circle-to-Box interactions. Because the project physics were strictly 2D, importing a heavy external physics library was unnecessary. Building it from scratch ensured the collision logic remained lightweight and easy to debug within the custom engine environment.",
+				"sections":[
+					{
+						"name": "Performance & Memory Optimization",
+						"explenation":"To maintain a high frame rate, the manager pre-allocates memory for collider vectors at startup, which prevents runtime fragmentation and expensive reallocations. I also implemented an active/passive state toggle for all colliders; the system only processes checks for active entities, significantly reducing the CPU load by completely ignoring static environment pieces.\n\nTo further keep the per-frame cost low, the manager performs a distance check between entities before any complex math occurs. If two objects are beyond a set threshold, the collision check is aborted immediately. This layered approach ensures that the engine only spends resources on relevant, high-priority interactions."
+					},
+					{
+						"name": "Tag-Based Interaction Filtering",
+						"explenation":"A tag-filtering system further refines the process by ensuring only compatible pairs are calculated. This allows the engine to focus on essential interactions like Player vs. Ground while completely skipping unnecessary logic for pairs like Enemy vs. Pickup. By filtering collisions at the tag level, the system remains efficient even as the number of entities in a level increases.",
+						"video": {
+							"name": "TEST",
+							"link": "/media/test/testLink.mp4"
+						}
+					}
+				]
+			
+			},
+			{
+				"name":"Character Controller & Feel",
+				"explenation": "The character controller translates the donkey's stubborn personality into gameplay through tight, reliable movement metrics. Because this project was built in a custom school engine, I developed the entire state machine for the player from scratch. This provided total control over how the character interacts with the world, allowing me to fine-tune the \"weight\" of the donkey to match the precision platforming style of games like Hollow Knight. I focused on making the movement feel heavy yet responsive, ensuring that every jump, dash, and landing felt intentional and grounded.",
+				"sections":[
+					{
+						"name": "Live Data-Driven Balancing",
+						"explenation":"To achieve the perfect \"game feel,\" I implemented a data-driven system that imports all movement and combat statistics from a JSON configuration file. Because the engine features a live debug mode, these values can be edited and updated live during runtime without restarting the game. This workflow was essential for tweaking the donkey's physics and jump arcs perfectly, allowing for immediate feedback on how changes to the gravity or jump forces impacted the overall playability."
+					},
+					{
+						"name": "Smooth Camera",
+						"explenation":"To maintain a high-quality visual experience and prevent motion sickness, the camera logic uses a custom SmoothDamp implementation rather than a hard parent-child transform. The camera follows a target position based on the player’s coordinates but uses a smoothing factor to lag slightly behind. This creates a more cinematic feel during high-speed movement and softens the impact of sudden vertical shifts without losing the player in the frame.",
+						"video": {
+							"name": "TEST",
+							"link": "/media/test/testLink.mp4"
+						}
+					},
+					{
+						"name": "Animation-Driven Landing Logic",
+						"explenation":"To ensure stable landings, I implemented logic that detects the specific ground collider the player contacts and snaps the character’s Y-position to the top of that surface. The landing animation is then locked so it only triggers once before transitioning to idle. This prevents landing jitter and ensures the character lands at the correct height with a clear sense of impact."
+					}
+				]
+			
+			}
+		]
 	},
 	{
 		"title": "Lonely_Lighthouse",
