@@ -44,6 +44,8 @@ export default function About() {
 
 					<h3>Want to contact me?</h3>
 					<p>If you&apos;re interested in working together, discussing game development, or simply talking about sailing, feel free to reach out. I enjoy thoughtful conversations and connecting with people who share an interest in building strong teams and well-crafted systems.</p>
+					<p>nordholm.carl@gmail.com</p>
+
 					<div className={AboutStyle.Contact}>
 						<a
 							href="https://www.linkedin.com/in/carl-nordholm"
