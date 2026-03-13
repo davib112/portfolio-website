@@ -5,12 +5,12 @@
 		"summary": "A custom C++ game engine developed over six months by a small student team at TGA, built alongside the games that used it and improved iteratively across multiple projects.",
 		"summaryVideo": {
 			"name": "LarmetGickAbout",
-			"link": "/media/larmet_gick/Showcase_larmet.mp4"
+			"link": "/media/crack_engine/crack_intro.mp4"
 		},
 		"introduction": "CrackEngine is a custom C++ game engine developed over six months by a small TGA student team, built in parallel with several student game projects. It features a full rendering pipeline built on DirectX 11, integrated physics, flexible gameplay systems, and editor support. The engine was iteratively improved project by project, enabling rapid prototyping, reliable reuse of core systems, and efficient iteration on gameplay features.",
 		"introVideo": {
-			"name": "LarmetGick Youtube Trailer",
-			"link": "https://www.youtube.com/embed/s16y1qExd9Q"
+			"name": "LarmetGickAbout",
+			"link": "/media/crack_engine/crack_intro.mp4"
 		},
 		"devTime": "6 Months",
 		"engine": "C++",
@@ -62,14 +62,6 @@
 							"}"
 						],
 						"language": "cpp"
-					},
-					{
-						"name": "GameObject–Component Diagram",
-						"explenation": "Diagram showing the hierarchy of GameObjects and Components in CrackEngine.",
-						"image": {
-							"name": "GameObjectComponentDiagram",
-							"link": "/media/test/ducky.png"
-						}
 					}
 				]
 			},
@@ -78,29 +70,21 @@
 				"explenation": "I built the editor backend for CrackEngine to support efficient development and iteration across all projects using the engine. It allows inspection and modification of GameObjects, component composition, transforms, hierarchies, and runtime states. This editor was central to the development workflow, enabling rapid iteration on enemies, player behavior, and interactive objects. The system was designed to integrate tightly with engine math, component management, and scene hierarchy.",
 				"sections": [
 					{
-						"name": "Debug & Line Drawer",
-						"explenation": "The editor integrates a 3D line drawing system for debugging, including custom shaders. These lines allow visualization of object positions, component data, and parent-child relationships in real-time, making scene setup and AI development easier. Debug logs are automatically excluded in release builds."
-					},
-					{
-						"name": "Component Inspection",
-						"explenation": "Components can be added, inspected, and modified directly in the editor. The system supports dynamic templates, allowing developers to attach multiple component types to GameObjects, query them individually or in groups, and edit properties at runtime. This made testing and iterating on game mechanics extremely efficient."
-					},
-					{
-						"name": "Component Management Example",
-						"explenation": "This snippet shows how the editor interacts with GameObjects to add and query components.",
-						"code": [
-							"THIS IS NOT A CODE SNIPPET YET ONLY A LITTLE TEST SO FAR"
-						],
-						"language": "cpp"
-					},
-					{
 						"name": "Parent-Child & Drag-Drop",
 						"explenation": "The editor supports robust drag-and-drop workflows, both internally and from the operating system. Assets such as models and textures can be dragged directly from Windows Explorer into the editor, where they are imported and instantiated using the engine’s asset and component systems.\n\nThe hierarchy view fully supports parent–child relationships. GameObjects can be reparented via drag-and-drop, with local and world transforms recalculated automatically to preserve spatial consistency. This behavior is driven by the engine’s transform and math systems, ensuring correct position, rotation, and scale propagation across complex hierarchies rather than relying on editor-specific overrides.",
 						"video": {
 							"name": "Gameobject Drag & Drop",
-							"link": "/media/aeon/Aeon_PlayerMov.mp4"
+							"link": "/media/crack_engine/parent_child.mp4"
 						},
 						"textArea": "left"
+					},
+					{
+						"name": "Component Inspection",
+						"explenation": "Components can be added, inspected, and modified directly in the editor. The system supports dynamic templates, allowing developers to attach multiple component types to GameObjects, query them individually or in groups, and edit properties at runtime. This made testing and iterating on game mechanics extremely efficient.",
+						"video": {
+							"name": "Component Inspection",
+							"link": "/media/crack_engine/component_system.mp4"
+						}
 					},
 					{
 						"name": "Save & Load",
@@ -240,7 +224,7 @@
 						"explenation": "The video shows the LineDrawer streaming debug lines live from the engine in a debug build.",
 						"video": {
 							"name": "LineDrawer Demo",
-							"link": "/media/test/testLink.mp4"
+							"link": "/media/crack_engine/linedrawer_navmesh.mp4"
 						}
 					}
 				]
@@ -427,7 +411,7 @@
 						"explenation": "This video demonstrates the base movement foundation, showing the interaction between gravity, grounded state resets, and the responsive jumping mechanics before any specialized abilities are applied.",
 						"video": {
 							"name": "Base Movement Showcase",
-							"link": "/media/test/testLink.mp4"
+							"link": "/media/snabb_grabb/movement.mp4"
 						}
 					}
 				]
@@ -438,12 +422,7 @@
 				"sections": [
 					{
 						"name": "Deterministic Shooting: Physics Sweeps",
-						"explenation": "To ensure 100% accuracy in a high-speed environment, I replaced kinetic bullets with a sweep mechanism. When the player fires, the system performs an immediate physics sweep. If a hit is detected, the enemy is scheduled for destruction after a delay calculated from the weapon's unique bullet speed. This approach allows for entirely simulated bullets that feel physically accurate while remaining deterministic. This works effectively because the enemies in our game are static; for moving targets, more advanced predictive logic would be required to maintain this level of precision.",
-						"code": [
-							"INSERT CODE HERE"
-						],
-						"language": "cpp",
-						"textArea": "left"
+						"explenation": "To ensure 100% accuracy in a high-speed environment, I replaced kinetic bullets with a sweep mechanism. When the player fires, the system performs an immediate physics sweep. If a hit is detected, the enemy is scheduled for destruction after a delay calculated from the weapon's unique bullet speed. This approach allows for entirely simulated bullets that feel physically accurate while remaining deterministic. This works effectively because the enemies in our game are static; for moving targets, more advanced predictive logic would be required to maintain this level of precision."
 					},
 					{
 						"name": "Ability Hurtboxes & Level Routing",
@@ -458,7 +437,7 @@
 						"explenation": "To empower gameplay designers in refining each ability, I ensured nearly every aspect—from dash distance and gravity scales to bullet velocity—was customizable at runtime. This flexibility allows for rapid iteration and 'live' balancing sessions, making it possible to fine-tune the addictive feel of the game without requiring code recompilation.",
 						"image": {
 							"name": "Designer Tuning UI",
-							"link": "/media/test/ducky.png"
+							"link": "/media/snabb_grabb/edit.png"
 						}
 					}
 				]
@@ -524,31 +503,12 @@
 		]
 	},
 	{
-		"title": "NSH",
-		"displayTitle": "Nothing Strange Here",
-		"summary": "A cozy and mysterious exploration game where you play as an investigative journalist in Larcenest Gap. Explore the town, take photos, publish articles, and uncover strange secrets that influence how the town changes.",
-		"summaryVideo": {
-			"name": "TestLink",
-			"link": "/media/test/testLink.mp4"
-		},
-		"introduction": "Nothing Strange Here is a cozy mystery adventure where players step into the shoes of an investigative journalist in the quirky town of Larcenest Gap. As the Lead UI/UX Designer and Programmer, I am responsible for bridge the gap between complex creative tools and a relaxing player experience. My work focuses on developing intuitive systems that allow players to capture, edit, and document their journey through a highly personalized lens.",
-		"introVideo": {
-			"name": "TestLink",
-			"link": "https://www.youtube.com/embed/79KObxPyjOY"
-		},
-		"devTime": "1 year",
-		"engine": "Unity, C#",
-		"genre": "Cozy Photography",
-		"groupSize": "9",
-		"sections": []
-	},
-	{
 		"title": "HF4",
 		"displayTitle": "High Frontier 4 All",
 		"summary": "A digital multiplayer adaptation of High Frontier, one of the most complex board games ever created, developed during my internship at ION Games with a focus on translating the board game’s depth into an accessible online experience.",
 		"summaryVideo": {
 			"name": "TestLink",
-			"link": "/media/test/testLink.mp4"
+			"link": "/media/hf4/hf4_intro.mp4"
 		},
 		"introduction": "High Frontier 4 All is the digital adaptation of Ion Game Design's strategy title, recognized as one of the most complex board game experiences due to its intricate resource management and abstracted orbital mechanics. Developed as a dedicated mobile experience, the project involved translating a high-density system of solar system colonization and fuel-based transit into a functional, portable format. During my six-month internship, I worked across the codebase to refine the multiplayer experience using Unity’s UNet system, optimize computational logic, and implement the gameplay rules that define the High Frontier universe.",
 		"introVideo": {
@@ -566,18 +526,14 @@
 				"sections": [
 					{
 						"name": "Multiplayer & Session Resilience",
-						"explenation": "I was responsible for maintaining and extending the peer-to-peer multiplayer framework built on UNet for High Frontier 4 All. Because matches can last many hours, resilience to unstable mobile connections was critical. To address this, I implemented a reconnection layer that cached session credentials on the client, allowing players to re-authenticate with the host after a disconnect. Once reconnected, the host triggered a full state synchronization, sending an full snapshot of all component stacks, resource levels, and the game state in general to restore the client to the current simulation state.\n\nThis system worked alongside a persistent save mechanism that allowed the host to preserve the entire game state during full session interruptions, ensuring that no progress was lost regardless of connection quality. I also implemented fallback logic that transitioned disconnected players into a passive state, allowing matches to continue without blocking gameplay.",
-						"code": [
-							"INSERT CODE HERE"
-						],
-						"language": "tsx"
+						"explenation": "I was responsible for maintaining and extending the peer-to-peer multiplayer framework built on UNet for High Frontier 4 All. Because matches can last many hours, resilience to unstable mobile connections was critical. To address this, I implemented a reconnection layer that cached session credentials on the client, allowing players to re-authenticate with the host after a disconnect. Once reconnected, the host triggered a full state synchronization, sending an full snapshot of all component stacks, resource levels, and the game state in general to restore the client to the current simulation state.\n\nThis system worked alongside a persistent save mechanism that allowed the host to preserve the entire game state during full session interruptions, ensuring that no progress was lost regardless of connection quality. I also implemented fallback logic that transitioned disconnected players into a passive state, allowing matches to continue without blocking gameplay."
 					},
 					{
 						"name": "Automated Bug Reporting",
 						"explenation": "To streamline the QA process for such a complex simulation, I built an in-game bug reporting system that automated data collection for the development team. Previously, users had to manually fill out external forms, but this new system allowed players to submit reports directly from the interface, including a description of the issue and a \"severity\" rating. Upon submission, the tool automatically gathered the current Unity console logs and game-state data, sending it via a web request to the company’s existing spreadsheet database. This ensured that every report was backed by technical context, making it significantly easier to diagnose logic errors in the game’s deep ruleset while working within the studio’s established workflow.",
 						"image": {
-						"name": "Bug Report Image",
-						"link": "/media/test/ducky.png"
+							"name": "Bug Report Image",
+							"link": "/media/hf4/bug_report.png"
 						}
 					}
 				]
@@ -589,18 +545,18 @@
 					{
 						"name": "UX Feedback and Action Validation",
 						"explenation": "The UI is designed to give the player instant feedback while keeping the game state synced. Since buttons stay visible even when an action isn't allowed, the game uses local checks to explain exactly why a player can’t do something at that moment. This helps teach the rules directly through the interface. If a move looks valid locally, the UI updates to show the result while sending the data to the host in the background. If the host finds a problem, usually due to a desync, the game reverts the UI to the correct state and notifies the player. This keeps the game feeling fast on mobile while ensuring everyone stays in sync.",
-						"image": {
-						"name": "UX Feedback",
-						"link": "/media/test/ducky.png"
+						"video": {
+							"name": "UX Feedback",
+							"link": "/media/hf4/ui_feedback.mp4"
 						}
 					},
 					{
 						"name": "Faction Selection and Rocket Rendering",
 						"explenation": "For the faction selection and player summary screens, I implemented a performant 3D preview system that showcases unique rocket models alongside their respective stats. To minimize mobile rendering overhead, I utilized a single-camera setup—active only when a rocket is in view—that excludes shadows and shares a single renderer across all previews. As the player scrolls through factions, the system only fully renders the focused model while keeping the others turned off. This setup delivers a high-fidelity look that remains lightweight, ensuring a smooth transition between menus and the main game.",
-						"code": [
-							"INSERT CODE HERE"
-						],
-						"language": "tsx"
+						"video": {
+							"name": "faction Selection",
+							"link": "/media/hf4/faction_selection.mp4"
+						}
 					}
 				]
 			},
@@ -615,17 +571,80 @@
 					{
 						"name": "Modular Ability System",
 						"explenation": "Beyond base statistics, many cards possess unique abilities that are handled through a decoupled, event-driven architecture. This system was designed to allow the core engine to process complex rule exceptions without having to hard-code specific card behaviors. Each PatentObject holds a list of Ability ScriptableObjects that function on a Trigger and Result model. When an action occurs, such as a movement or a radiation check, the stack scans all its components for abilities with a matching trigger enum.\n\nWhen an ability is triggered, the system sends a comprehensive data package containing the current stack, the specific component, the trigger type, and player metadata. While most abilities only require a fraction of this information, providing a standardized context ensures the system can handle even the most complex card interactions. The ability processes this data and returns a generic result structure to the triggering code. This structure includes a success flag, a return type enum, and a list of affected components, allowing the engine to determine if the result is relevant to the current action.\n\nFor example, during a radiation check, the engine triggers all abilities with a radiation roll trigger. A Solar Sail component might return a specific result type for immunity. The radiation logic specifically looks for this type; if found, it checks for the returned component or components and exempts them from the roll. This architecture allows multiple different abilities to trigger simultaneously without interference. If one ability returns a result for a refuel multiplier while the engine is looking for radiation immunity, the irrelevant data is simply ignored.\n\nTo maintain the integrity of the 50-page ruleset, all ability logic is verified strictly on the host. The system waits for the host to confirm the result of an ability before finalizing the game state. This ensures that the complex rules are followed perfectly across the network, even if high-latency conditions cause a brief delay in action processing.",
-						"image": {
-						"name": "Ability",
-						"link": "/media/test/ducky.png"
-						}
+						"code": [
+							"[Header(\"Activation\")]",
+							"[SerializeField] private AbilityTrigger trigger;",
+							"",
+							"[SerializeField] private AbilityLimit limit;",
+							"[Tooltip(\"If the return is unused leave as None\")]",
+							"[SerializeField] private AbilityReturnType returnType = AbilityReturnType.None;",
+							"",
+							"[Header(\"Ability\")]",
+							"[TextArea(10, 7)][SerializeField] private string abilityExplanation;",
+							"",
+							"public AbilityReturn TryActivateAbilitiesOfComponent(AbilityData data)",
+							"{",
+							"  AbilityReturn returnData = new AbilityReturn(false, 0);",
+							"",
+							"  //If the ability is on a component",
+							"  if (Validate(data))",
+							"  {",
+							"    returnData = Activate(data);",
+							"  }",
+							"",
+							"  returnData.returnType = returnType;",
+							"",
+							"  return returnData;",
+							"}",
+							"",
+							"/// <summary>",
+							"/// Only Validates that the ability should be activated (trigger and Limits)",
+							"/// NOT that the ability will be successful",
+							"/// </summary>",
+							"public bool Validate(AbilityData data)",
+							"{",
+							"  if (trigger != data.trigger)",
+							"  {",
+							"    //Logger.LogWarning(\"Incorrect Trigger Type\");",
+							"    return false;",
+							"  }",
+							"",
+							"  if (!limit.ValidateLimit(data))",
+							"  {",
+							"    //Logger.LogWarning(\"Limit not met\");",
+							"    return false;",
+							"  }",
+							"",
+							"  if(!InnerValidate(data))",
+							"  {",
+							"    return false;",
+							"  }",
+							"",
+							"  return true;",
+							"}",
+							"",
+							"virtual protected bool InnerValidate(AbilityData data)",
+							"{",
+							"  return false;",
+							"}",
+							"",
+							"virtual protected AbilityReturn Activate(AbilityData data)",
+							"{",
+							"  Logger.LogWarning(\"Standard Ability Activated\");",
+							"  AbilityReturn returnData = new AbilityReturn(false, 0);",
+							"  return returnData;",
+							"}",
+							"",
+							"public string GetExplanation() => abilityExplanation;"
+						],
+						"language": "cpp"
 					},
 					{
 						"name": "Stacks and Components",
 						"explenation": "The transition from a static card in a player’s hand to a physical object in space is managed through a Component and Stack relationship. When a player spends Aqua to boost a patent into orbit, the PatentObject data is wrapped in a Component instance. A collection of these components forms a Stack. For a player to perform a move, they must first designate a Stack as a Rocket by assigning a source of thrust and ensuring that thrust has a valid, completed support chain. This structure allows the engine to distinguish between a simple collection of parts and a vessel capable of spaceflight.\n\nTo maintain performance, these validation checks are not run constantly in the background; instead, they are triggered by specific game events. When a player attempts to assign thrust or when a component is lost—due to hazards or radiation—the system verifies if the rocket's configuration remains valid. If the support chain is broken or the thrust source is removed, the vessel is transferred back to being a simple Stack and loses its ability to move. Once a valid Rocket is confirmed, the player can then spend their Move action to navigate that specific vessel across the map.",
 						"video": {
 							"name": "Rocket Moving",
-							"link": "/media/test/testLink.mp4"
+							"link": "/media/hf4/stack_cards.mp4"
 						}
 					}
 				]
@@ -676,11 +695,50 @@
 					},
 					{
 						"name": "Calculated Gaps and Dashing",
-						"explenation": "I designed the dash mechanic to allow for more than just horizontal movement. When a player attempts to dash over a gap, the system performs a series of point-checks in front of the character to validate potential landing spots. This ensures the player can only dash over empty space if there is a viable tile on the other side, preventing them from dashing into infinite voids while still allowing for aggressive, gap-clearing gameplay.",
+						"explenation": "I designed the dash mechanic to allow for more than just horizontal movement. When a player attempts to dash over a gap, the system checks in front of the character if there will be any tile to land on. This ensures the player can only dash over empty space if there is a viable tile on the other side, preventing them from dashing into infinite voids while still allowing for aggressive, gap-clearing gameplay.",
 						"code": [
-							"INSERT CODE HERE"
+							"float remainingTime = myDashComponent->GetTimer();",
+							"Tga::Vector2f remainingDistance = myDashComponent->GetVelocity(remainingTime);",
+							"Tga::Vector3f finalPosition = aParent.GetPosition() + Tga::Vector3f(remainingDistance.x, 0, remainingDistance.y);",
+							"Tga::Vector3f velocityPosition = aParent.GetPosition() + Tga::Vector3f(velocity.x, 0, velocity.y);",
+							"",
+							"GridTile* tileAtTarget = gridManager->GetTile(Tga::Vector2i(static_cast<int>(finalPosition.x), static_cast<int>(finalPosition.z)));",
+							"GridTile* tileAtVelocity = gridManager->GetTile(Tga::Vector2i(static_cast<int>(velocityPosition.x), static_cast<int>(velocityPosition.z)));",
+							"",
+							"if (!CheckTile(tileAtTarget, aParent, true) && !CheckTile(tileAtVelocity, aParent, true))",
+							"{",
+							"  Tga::Vector2f extraLength = myDashComponent->GetDirection().GetNormalized() * 200.f;",
+							"  Tga::Vector3f extraLengthPosition = velocityPosition;",
+							"  extraLengthPosition.x += extraLength.x;",
+							"  extraLengthPosition.z += extraLength.y;",
+							"",
+							"  GridTile* tileAtExtraLengthTarget = gridManager->GetTile(Tga::Vector2f(extraLengthPosition.x, extraLengthPosition.z));",
+							"",
+							"  if (CheckTile(tileAtExtraLengthTarget, aParent, false)) //Is a tile we can go to",
+							"  {",
+							"    std::cout << \"Extra Dash Allowed\" << std::endl;",
+							"    //Allow extra length if close",
+							"    myDashComponent->Dash(aParent, myDashComponent->GetDirection().GetNormalized(), myDashComponent->GetSpeed(), myDashComponent->GetDuration());",
+							"}",
+							"  else",
+							"  {",
+							"    std::cout << \"Dash stopped on edge\" << std::endl;",
+							"    myDashComponent->CancelDashOnEdge();",
+							"    myStateMachine.SetState(0, &aParent);",
+							"  }",
+							"}",
+							"else if (tileAtVelocity != nullptr) //Extra test to make sure we don't dash through walls and such",
+							"{",
+							"  if (tileAtVelocity->GetTileState() == eTileState::eUnwalkable)",
+							"  {",
+							"    std::cout << \"Dash stopped against solid\" << std::endl;",
+							"    myDashComponent->CancelDashOnEdge();",
+							"    myStateMachine.SetState(0, &aParent);",
+							"  }",
+							"",
+							"}"
 						],
-						"language": "tsx"
+						"language": "cpp"
 					}
 				]
 			},
@@ -700,7 +758,7 @@
 		"summary": "A short 2.5D platformer where you play as a donkey descending into hell. Hell-bent to get your soul back, fighting enemies and navigating hostile environments, developed as a student project.",
 		"summaryVideo": {
 			"name": "SnabbGrabbIntro",
-			"link": "/media/test/testLink.mp4"
+			"link": "/media/donkey/donkey_intro.mp4"
 		},
 		"introduction": "The concept for Donkeys Inferno stems from the classic trope of the stubborn donkey. When Death claims the donkey's soul, the donkey simply refuses to go, leading the player on a journey into the depths of hell to steal their soul back and escape. This project was an exercise in tight platforming design and custom engine logic, with game metrics and responsiveness heavily inspired by the precision found in Hollow Knight.",
 		"introVideo": {
@@ -725,7 +783,7 @@
 						"explenation":"A tag-filtering system further refines the process by ensuring only compatible pairs are calculated. This allows the engine to focus on essential interactions like Player vs. Ground while completely skipping unnecessary logic for pairs like Enemy vs. Pickup. By filtering collisions at the tag level, the system remains efficient even as the number of entities in a level increases.",
 						"video": {
 							"name": "TEST",
-							"link": "/media/test/testLink.mp4"
+							"link": "/media/donkey/donkey_colliders.mp4"
 						}
 					}
 				]
@@ -744,7 +802,7 @@
 						"explenation":"To maintain a high-quality visual experience and prevent motion sickness, the camera logic uses a custom SmoothDamp implementation rather than a hard parent-child transform. The camera follows a target position based on the player’s coordinates but uses a smoothing factor to lag slightly behind. This creates a more cinematic feel during high-speed movement and softens the impact of sudden vertical shifts without losing the player in the frame.",
 						"video": {
 							"name": "TEST",
-							"link": "/media/test/testLink.mp4"
+							"link": "/media/donkey/donkey_smoothCamera.mp4"
 						}
 					},
 					{
@@ -761,13 +819,13 @@
 		"displayTitle": "Lonely Lighthouse",
 		"summary": "Lonely Lighthouse is an atmospheric survival game developed solo for a game jam centered on the theme of Isolation. Set on a remote island, players must manage a delicate resource loop to keep a lighthouse operational while struggling against the toll of solitude. The project was recognized for its design, winning two awards during the jam, including the award for Best Theme.",
 		"summaryVideo": {
-			"name": "SnabbGrabbIntro",
-			"link": "/media/test/testLink.mp4"
+			"name": "LightHouseSummary",
+			"link": "/media/lighthouse/intro_video.mp4"
 		},
 		"introduction": "Lonely Lighthouse is an atmospheric survival game developed solo for a game jam centered on the theme of Isolation. Set on a remote island, players must manage a delicate resource loop to keep a lighthouse operational while struggling against the toll of solitude. The project was recognized for its design, winning two awards during the jam, including the award for Best Theme.",
 		"introVideo": {
-			"name": "SnabbGrabbIntro",
-			"link": "/media/test/testLink.mp4"
+			"name": "LightHouseIntro",
+			"link": "/media/lighthouse/intro_video.mp4"
 		},
 		"devTime": "20 hours",
 		"engine": "Unity, C#",
