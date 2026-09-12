@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="256"
+   height="256"
+   viewBox="0 0 7.68 7.68"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="dropdown.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.72036504"
+     inkscape:cx="-29.151887"
+     inkscape:cy="267.91972"
+     inkscape:window-width="933"
+     inkscape:window-height="1040"
+     inkscape:window-x="649"
+     inkscape:window-y="228"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 4.2925528,5.8925546 c -0.2499206,0.2499205 -0.6551693,0.2499205 -0.9050899,0 L 0.18744996,2.6925568 c -0.24993328,-0.2499395 -0.24993328,-0.6551625 0,-0.905102 0.2499397,-0.2499331 0.65516299,-0.2499331 0.90510264,0 L 3.8400082,4.534921 6.5874697,1.7874548 c 0.2499205,-0.2499331 0.6551699,-0.2499331 0.9050898,0 0.2499207,0.2499395 0.2499207,0.6551625 0,0.905102 z"
+     fill="#000000"
+     id="path1"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.639997;stroke-dasharray:none" />
+</svg>
