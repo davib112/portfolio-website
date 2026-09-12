@@ -43,7 +43,7 @@ export default function SiteHeader() {
 								</a>
 							</li>
 							<li>
-								<a href={`${basePath}/CV_Carl_Nordholm.pdf`} target="_blank" >
+								<a href={`${basePath}/cv_carl_nordholm.pdf`} target="_blank" >
 									<button>
 										Resumé
 										<img
