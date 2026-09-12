@@ -67,7 +67,7 @@ export default function About() {
 				</div>
 
 				<div className={AboutStyle.AboutImage}>
-					<img src={`${basePath}/media/test/ducky.png`} />
+					<img src={`${basePath}/media/other/carl_nordholm_portrait.png`} />
 				</div>
 				<div className={AboutStyle.AboutSkills}>
 					<h2>SKILLS</h2>

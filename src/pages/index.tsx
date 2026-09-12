@@ -29,7 +29,7 @@ export default function App() {
                 <div className={indexStyle.rightItem}>
 
                     <img
-                        src={`${basePath}/media/other/Carl_Nordholm_Portrait.png`}
+                        src={`${basePath}/media/other/carl_nordholm_portrait.png`}
                         alt="Portrait"
                     ></img>
                 </div>

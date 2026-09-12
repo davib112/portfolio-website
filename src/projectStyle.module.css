@@ -84,6 +84,7 @@
 
 	/*So that <a> link has correct offset*/
 	scroll-margin-top: var(--section-height-link-offset);
+	min-width: 0;
 }
 
 @media (max-width: 700px) {
@@ -125,6 +126,7 @@
 .CodeSection .TextPart {
 	flex: 1 1 40%; /* take up to ~60% of space */
 	padding: 0 10px;
+	min-width: 0;
 }
 
 .ParentSection {
@@ -145,6 +147,8 @@
 	max-height: 0;
 	opacity: 0;
 	
+	width: 100%;
+	min-width: 0;
 }
 
 .CollapsibleBodyOpen {

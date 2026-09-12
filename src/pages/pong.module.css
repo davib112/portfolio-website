@@ -87,13 +87,23 @@
 .settingsArea {
 	margin-top: 15px;
 	width: 80vw;
+	max-width: 100%;
 	position: relative;
 	display: grid;
 	grid-template-columns: auto auto auto;
+	gap: 1rem;
 }
+@media (max-width: 700px) {
+	.settingsArea {
+		grid-template-columns: 1fr;
+	}
+}
+
 .settingsSideArea {
 	text-align: left;
 	color: var(--text-color);
+	min-width: 0;
+	overflow-wrap: anywhere;
 }
 
 .settingsSideArea h1 {

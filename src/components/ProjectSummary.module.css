@@ -61,11 +61,16 @@
 	bottom: -5px;
 	left: -5px;
 	right: -5px;
-	height: 1.2em;
+	height: auto;
+	min-height: 1.2em;
 	background-color: rgba(0, 0, 0, 0.5);
 	pointer-events: none;
 	display: flex;
+	flex-wrap: wrap;
 	padding: 5px 10px 10px 10px;
+}
+.OnVideoText img{
+	height: 1.2em;
 }
 
 .OnVideoGroup {

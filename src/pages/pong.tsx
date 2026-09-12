@@ -86,7 +86,7 @@ export default function Pong() {
 			//console.log("Turned of loop: " + loopID.current);
 			return;
 		}
-		console.log("start");
+		//console.log("start");
 
 		//Input
 		const handleKeyDown = (e: KeyboardEvent) => {
@@ -120,7 +120,7 @@ export default function Pong() {
 			window.removeEventListener("keyup", handleKeyUp);
 			Reset();
 
-			console.log("done");
+			//console.log("done");
 			if (leftAi.current.on && rightAi.current.on) {
 				setIsPlaying(true);
 			}
@@ -170,12 +170,12 @@ export default function Pong() {
 		ball.current.Update(deltaTime, leftAi, rightAi);
 
 		if (ball.current.OutsideLeft()) {
-			console.log("Right Wins!");
+			//console.log("Right Wins!");
 			setRightPoints(rightPoints + 1);
 			setIsPlaying(false);
 		}
 		if (ball.current.OutsideRight()) {
-			console.log("Left Wins!");
+			//console.log("Left Wins!");
 			setLeftPoints(leftPoints + 1);
 			setIsPlaying(false);
 		}
@@ -286,9 +286,10 @@ export default function Pong() {
 				</div>
 
 				{/*Info Part */}
-				<Sections sections={project.sections} />
 
 			</div>
+
+			<Sections sections={project.sections} />
 		</div>
 	);
 }
